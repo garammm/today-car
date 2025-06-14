@@ -1,12 +1,12 @@
 spring:
   datasource:
     write:
-      url: jdbc:h2:file:../data/todaycarddb;MODE=MySQL
+      url: jdbc:h2:file:../data/todaycardb;MODE=MySQL
       driver-class-name: org.h2.Driver
       username: sa
       password: 
     read:
-      url: jdbc:h2:file:../data/todaycarddb;MODE=MySQL
+      url: jdbc:h2:file:../data/todaycardb;MODE=MySQL
       driver-class-name: org.h2.Driver
       username: sa
       password:   

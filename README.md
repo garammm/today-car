@@ -1,4 +1,6 @@
-# Today Car - 자동차 자랑 게시판
+# Today Car - 자동차 자랑 
+
+![](./architecture.png)
 
 ## 구성
 - 프론트엔드: React + TypeScript (Vite)

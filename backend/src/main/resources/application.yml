@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    write:
+      url: jdbc:h2:file:../data/todaycarddb;MODE=MySQL
+      driver-class-name: org.h2.Driver
+      username: sa
+      password: 
+    read:
+      url: jdbc:h2:file:../data/todaycarddb;MODE=MySQL
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:   
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true  # TCP 및 외부 접근 허용
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mycar
+      auto-index-creation: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # create에서 update로 변경하여 데이터 유지
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        default_schema: PUBLIC  # 스키마 명시
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+    com.todaycar: DEBUG
+    org.h2.server.web: DEBUG  # H2 콘솔 디버그 로그 추가
+server:
+  port: 8080
